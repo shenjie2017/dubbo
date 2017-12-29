@@ -1,0 +1,17 @@
+group 'com.blue.dubbo'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+//    mavenCentral()
+    maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+}
+
+dependencies {
+    compile group: 'org.springframework', name: 'spring-context', version:'4.2.6.RELEASE'
+    compile group: 'com.alibaba', name: 'dubbo', version:'2.5.3'
+    compile project(':dubbo-api')
+}
